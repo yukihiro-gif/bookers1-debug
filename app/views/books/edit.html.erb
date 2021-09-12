@@ -1,8 +1,17 @@
 <h1>Editing Book</h1>
 
+<div>
+  <%= render 'form', book:@book %>
+</div>
+
 <form>
-  <%= render 'form', book: @book %>
+    <%= form_with model:@book, url:edit_book_path, local:true do |f| %>
+     <%= f.label :title%>
+     <%= f.text_field :title %>
+     <%= f.label :body %>
+     <%= f.text_field :body %>
+    <% end %>
 </form>
 
 <%= link_to 'Show', @book, class: "show_#{@book.id}" %> |
-<%= link_to 'Back', books_path, class: "back" %>
+<%= link_to 'Back', books_path(@book), class: "back" %>
