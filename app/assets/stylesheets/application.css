@@ -79,3 +79,15 @@ label {
   background-color: red;
   display: table;
 }
+
+
+/*homes/index.html.erb(練習用)*/
+.frame{
+  display: flex;
+}
+.layout-practice{
+  border: 2px solid black;
+}
+.box{
+  height:400px;
+}
